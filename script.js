@@ -20,7 +20,24 @@ btns.forEach(button => {
             display.value = ""
         }
 
+        if (id === "zero-zero") {
+            display.value += 0
+            display.value += 0
+        }
+
+        if (id === "dot") {
+            display.value += "." 
+        }
+
+        if (id === "add") {
+            
+            
+        }
+
+
         
+
+
     })    
 })
 

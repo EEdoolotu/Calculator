@@ -5,7 +5,7 @@
 }
 
 .calc-body {
-    background-color: black;
+    background-color: #333333;
 }
 
 body {
@@ -31,15 +31,16 @@ input {
     width: 300px;
     height: 70px;
     background-color: black;
+    font-size: 50px;
 }
 
 button {
     border-radius: 50%;
-    padding: 20px;
     width: 60px;
     height: 60px;
-    background-color: #333333;
+    background-color: black;
     border : 2px solid black;
+    font-size: 20px;
     
 }
 
@@ -75,4 +76,8 @@ button {
     justify-content: space-evenly;
     margin-top: 10px;
     gap: 10px;
+}
+
+.row {
+    background-color: #333333;
 }
