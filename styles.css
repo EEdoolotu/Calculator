@@ -1,3 +1,13 @@
+* {
+    color: white;
+    background-color: black;
+    
+}
+
+.calc-body {
+    background-color: black;
+}
+
 body {
     display : flex;
     align-items: center;
@@ -5,7 +15,7 @@ body {
 }
 
 .calc-body {
-    border : 2px solid black;
+    border : 2px solid white;
     border-radius: 8px;
     height: 500px;
     width: 350px;
@@ -20,6 +30,7 @@ input {
     margin: 30px auto;
     width: 300px;
     height: 70px;
+    background-color: black;
 }
 
 button {
@@ -27,6 +38,8 @@ button {
     padding: 20px;
     width: 60px;
     height: 60px;
+    background-color: #333333;
+    border : 2px solid black;
     
 }
 
