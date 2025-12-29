@@ -25,10 +25,41 @@ input {
 button {
     border-radius: 50%;
     padding: 20px;
+    width: 60px;
+    height: 60px;
     
 }
 
 #first-row {
     display: flex;
-    justify-content: space-evenly
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+#second-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#third-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#fourth-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#fifth-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    gap: 10px;
 }
