@@ -7,8 +7,8 @@ let operator = null;
 
 
 function extract_num(word) {
-    let number_part = word.slice(3);
-    return parseInt(number_part);
+    const match = word.match(/\d+/);
+    return match ? parseInt(match[0]) : null;
 }
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
@@ -29,8 +29,7 @@ btns.forEach(button => {
         }
 
         if (id === "zero-zero") {
-            display.value += 0
-            display.value += 0
+            display.value += "00"
         }
 
         if (id === "dot" && !display.value.includes(".")) {
@@ -43,12 +42,62 @@ btns.forEach(button => {
             display.value = ""
         }
 
+        if (id === "subtract") {
+            firstNum = parseFloat(display.value);
+            operator = "subtract"
+            display.value = ""
+        }
+
+        if (id === "divide") {
+            firstNum = parseFloat(display.value);
+            operator = "divide"
+            display.value = ""
+        }
+        if (id === "percentage") {
+            firstNum = parseFloat(display.value);
+            display.value = firstNum / 100
+        }
+
+        if (id === "multiply") {
+            firstNum = parseFloat(display.value);
+            operator = "multiply"
+            display.value = ""
+        }
+
         if ((id === "equals") && (operator === "add")) {
             const secondNum = parseFloat(display.value)
             display.value = firstNum + secondNum
 
             firstNum = null;
             operator = null;
+        }
+
+        if ((id === "equals") && (operator === "subtract")) {
+            const secondNum = parseFloat(display.value)
+            display.value = firstNum - secondNum
+
+            firstNum = null;
+            operator = null;
+        }
+
+        if ((id === "equals") && (operator === "multiply")) {
+            const secondNum = parseFloat(display.value)
+            display.value = firstNum * secondNum
+
+            firstNum = null;
+            operator = null;
+        }
+
+        if ((id === "equals") && (operator === "divide")) {
+            const secondNum = parseFloat(display.value)
+            display.value = firstNum / secondNum
+
+            firstNum = null;
+            operator = null;
+        }
+
+        if (id === "delete") {
+            display.value = display.value.slice(0, -1)
         }
 
     })    
